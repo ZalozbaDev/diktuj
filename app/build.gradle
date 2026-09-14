@@ -1,0 +1,68 @@
+plugins {
+    id "com.android.application"
+}
+
+def javaString = { value ->
+    '"' + value.toString().replace('\\', '\\\\').replace('"', '\\"') + '"'
+}
+
+def serverConfig = new Properties()
+rootProject.file("server-config.properties").withInputStream { serverConfig.load(it) }
+def config = { key ->
+    def value = serverConfig.getProperty(key)
+    if (value == null) {
+        throw new GradleException("Missing ${key} in server-config.properties")
+    }
+    value.trim()
+}
+
+def licenseAssets = layout.buildDirectory.dir("generated/licenseAssets")
+def prepareLicenseAssets = tasks.register("prepareLicenseAssets", Sync) {
+    from(rootProject.projectDir) {
+        include "LICENSE", "THIRD_PARTY_NOTICES.md", "third_party/**"
+    }
+    into(licenseAssets.map { it.dir("licenses") })
+}
+
+android {
+    namespace "de.adrianzimmermann.sorbianonlinespeech"
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "de.adrianzimmermann.sorbianonlinespeech"
+        minSdk 23
+        targetSdk 34
+        versionCode 25
+        versionName "0.7.10"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "DEFAULT_RECOGNIZER_URL", javaString(config("recognizerUrl"))
+        buildConfigField "int", "DEFAULT_RECOGNIZER_SAMPLE_RATE", config("recognizerSampleRate")
+        buildConfigField "boolean", "DEFAULT_CONTINUOUS_RECOGNITION", config("continuousRecognition")
+        buildConfigField "String", "DEFAULT_TTS_URL", javaString(config("ttsUrl"))
+        buildConfigField "String", "DEFAULT_TTS_PROTOCOL", javaString(config("ttsProtocol"))
+        buildConfigField "String", "DEFAULT_TTS_SPEAKER_ID", javaString(config("ttsSpeakerId"))
+        buildConfigField "String", "SUPPORTED_RECOGNITION_LANGUAGES", javaString(config("recognitionLanguages"))
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    sourceSets.main.assets.srcDir(licenseAssets)
+
+    testOptions {
+        animationsDisabled true
+    }
+}
+
+tasks.named("preBuild").configure {
+    dependsOn(prepareLicenseAssets)
+}
+
+dependencies {
+    implementation "com.squareup.okhttp3:okhttp:4.12.0"
+
+    androidTestImplementation "androidx.test:runner:1.7.0"
+    androidTestImplementation "junit:junit:4.13.2"
+    androidTestImplementation "com.squareup.okhttp3:mockwebserver:4.12.0"
+}

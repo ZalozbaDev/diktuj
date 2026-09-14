@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="recognition_sample_rate">Recording sample rate</string>
+    <string name="continuous_recognition">Record until Stop</string>
+    <string name="ime_choose_keyboard">Choose keyboard</string>
+    <string name="tts_protocol_label">TTS API</string>
+    <string name="tts_speaker_label">Speaker ID</string>
+    <string name="tts_speaker_required">Enter a Bamborak speaker ID.</string>
+    <string-array name="tts_protocol_options">
+        <item>Text + language</item>
+        <item>Bamborak</item>
+    </string-array>
+    <string name="app_name">Sorbian</string>
+    <string name="service_name">Sorbian Online Speech Recognition</string>
+    <string name="tts_service_name">Sorbian Online Text-to-Speech</string>
+    <string name="ime_name">Sorbian Voice Input</string>
+    <string name="ime_subtype_hsb">Upper Sorbian voice input</string>
+    <string name="recognizer_server_url">Recognizer server URL</string>
+    <string name="recognizer_server_hint" translatable="false">ws://host:2700</string>
+    <string name="recognition_language">Recognition language</string>
+    <string name="save">Save</string>
+    <string name="voice_input_section">Voice input</string>
+    <string name="recognition_test_label">Test voice recognition</string>
+    <string name="voice_output_section">Voice output</string>
+    <string name="advanced_settings">Advanced settings</string>
+    <string name="show_advanced_settings">Show advanced settings</string>
+    <string name="hide_advanced_settings">Hide advanced settings</string>
+    <string name="start_test">Start recognition</string>
+    <string name="stop">Stop</string>
+    <string name="test_android_service">Run Android service diagnostic</string>
+    <string name="open_ime_settings">Set up voice input</string>
+    <string name="show_ime_picker">Select voice input</string>
+    <string name="tts_text_label">Text to read aloud</string>
+    <string name="tts_text_hint">Text to read aloud</string>
+    <string name="tts_url_label">External TTS URL (optional)</string>
+    <string name="tts_url_hint" translatable="false">https://host/tts</string>
+    <string name="speak_android">Test voice output</string>
+    <string name="speak_external">Test TTS server directly</string>
+    <string name="stop_speech">Stop speech</string>
+    <string name="open_tts_settings">Voice output settings</string>
+    <string name="read_selected_text">Read with Sorbian TTS</string>
+    <string name="recognition_service_test">RecognitionService Test</string>
+    <string name="start_service_test">Start explicit service recognition</string>
+    <string name="status_idle">Idle</string>
+    <string name="status_settings_saved">Settings saved</string>
+    <string name="status_speech_stopped">Speech stopped</string>
+    <string name="status_connected">Connected</string>
+    <string name="status_recording">Recording</string>
+    <string name="status_partial">Partial: %1$s</string>
+    <string name="status_result_received">Result received</string>
+    <string name="status_no_speech">No speech recognized</string>
+    <string name="status_error">Error: %1$s</string>
+    <string name="status_stopped">Stopped</string>
+    <string name="status_stopping">Finishing recognition...</string>
+    <string name="status_service_ready">Service ready</string>
+    <string name="status_speech_started">Speech started</string>
+    <string name="status_speech_ended">Speech ended</string>
+    <string name="status_recognizer_error">Recognizer error: %1$d</string>
+    <string name="status_result_received_kind">Received %1$s result</string>
+    <string name="transcript_result">%1$s: %2$s</string>
+    <string name="result_partial">partial</string>
+    <string name="result_final">final</string>
+    <string name="tts_error">TTS error: %1$s</string>
+    <string name="tts_unavailable">Android TTS is not available</string>
+    <string name="tts_enter_text">Enter text to read</string>
+    <string name="tts_starting">Starting Android TTS</string>
+    <string name="tts_still_starting">Android TTS is starting</string>
+    <string name="tts_voice_missing">No Android TTS voice for %1$s</string>
+    <string name="tts_reading">Reading with Android TTS: %1$s</string>
+    <string name="tts_url_empty">External TTS URL is empty</string>
+    <string name="tts_requesting">Requesting external TTS</string>
+    <string name="tts_network_failed">External TTS failed: %1$s</string>
+    <string name="tts_audio_error">External TTS audio error: %1$s</string>
+    <string name="tts_finished">External TTS finished</string>
+    <string name="tts_playback_failed">External TTS audio playback failed</string>
+    <string name="tts_playing">Playing external TTS audio</string>
+    <string name="recognizer_no_final_result">Recognizer did not return a final result.</string>
+    <string name="recognizer_microphone_missing">Microphone permission is missing.</string>
+    <string name="recognizer_url_invalid">Invalid recognition server URL.</string>
+    <string name="recognizer_config_failed">Could not send recognition configuration.</string>
+    <string name="recognizer_connection_failed">Recognition connection failed.</string>
+    <string name="recognizer_audio_unsupported">This device cannot capture 16 kHz mono audio.</string>
+    <string name="recognizer_microphone_revoked">Microphone permission was revoked.</string>
+    <string name="recognizer_recorder_failed">Audio recorder initialization failed.</string>
+    <string name="recognizer_connection_slow">Recognition connection is too slow for live audio.</string>
+    <string name="recognizer_audio_closed">Recognition audio connection closed.</string>
+    <string name="recognizer_capture_failed">Audio capture failed.</string>
+    <string name="recognizer_finish_failed">Could not finish the recognition request.</string>
+    <string name="ime_language">Voice recognition language</string>
+    <string name="ime_open_app_settings">Open server settings</string>
+    <string name="ime_hide_keyboard">Hide keyboard</string>
+    <string name="ime_start_recognition">Start voice input</string>
+    <string name="ime_stop_recognition">Stop voice input</string>
+    <string name="ime_tap_microphone">Tap the microphone to dictate</string>
+    <string name="ime_microphone_permission_missing">Open the app and grant microphone permission</string>
+    <string name="ime_connecting">Connecting to speech recognition...</string>
+    <string name="ime_connected">Connected. Start speaking.</string>
+    <string name="ime_listening">Listening...</string>
+    <string name="ime_finishing">Finishing recognition...</string>
+    <string name="ime_stopped">Voice input stopped</string>
+    <string name="ime_no_input_field">No active text field</string>
+    <string name="ime_inserted">Inserted: %1$s</string>
+    <string name="tts_sample_text">Dobry dźeń, witajće!</string>
+
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<input-method xmlns:android="http://schemas.android.com/apk/res/android"
+    android:settingsActivity="de.adrianzimmermann.sorbianonlinespeech.MainActivity"
+    android:supportsSwitchingToNextInputMethod="true">
+
+    <subtype
+        android:icon="@drawable/ic_launcher"
+        android:imeSubtypeLocale="hsb"
+        android:imeSubtypeMode="keyboard"
+        android:isAsciiCapable="false"
+        android:label="@string/ime_subtype_hsb" />
+</input-method>

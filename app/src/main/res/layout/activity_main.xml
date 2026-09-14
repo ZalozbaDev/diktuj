@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            style="@style/SectionLabel"
+            android:text="@string/voice_input_section" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/open_ime_settings"
+                style="@style/WeightedButton"
+                android:text="@string/open_ime_settings" />
+
+            <Button
+                android:id="@+id/show_ime_picker"
+                style="@style/WeightedButton"
+                android:text="@string/show_ime_picker" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/FieldLabel"
+            android:text="@string/recognition_test_label" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/start_test"
+                style="@style/WeightedButton"
+                android:text="@string/start_test" />
+
+            <Button
+                android:id="@+id/stop_test"
+                style="@style/WeightedButton"
+                android:text="@string/stop" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="@string/status_idle" />
+
+        <TextView
+            android:id="@+id/transcript"
+            style="@style/Transcript" />
+
+        <TextView
+            style="@style/SectionLabel"
+            android:text="@string/voice_output_section" />
+
+        <TextView
+            style="@style/FieldLabel"
+            android:text="@string/tts_text_label" />
+
+        <EditText
+            android:id="@+id/tts_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|start"
+            android:hint="@string/tts_text_hint"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:minLines="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/speak_android"
+                style="@style/WeightedButton"
+                android:text="@string/speak_android" />
+
+            <Button
+                android:id="@+id/stop_speech"
+                style="@style/WeightedButton"
+                android:text="@string/stop_speech" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/open_tts_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/open_tts_settings" />
+
+        <Button
+            android:id="@+id/toggle_advanced"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/show_advanced_settings" />
+
+        <LinearLayout
+            android:id="@+id/advanced_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/SectionLabel"
+                android:text="@string/advanced_settings" />
+
+            <TextView
+                style="@style/FieldLabel"
+                android:text="@string/recognizer_server_url" />
+
+            <EditText
+                android:id="@+id/server_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/recognizer_server_hint"
+                android:importantForAutofill="no"
+                android:inputType="textUri"
+                android:singleLine="true" />
+
+            <TextView
+                style="@style/FieldLabel"
+                android:text="@string/recognition_language" />
+
+            <Spinner
+                android:id="@+id/language_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/open_service_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/test_android_service" />
+
+            <TextView
+                style="@style/FieldLabel"
+                android:labelFor="@+id/recognition_sample_rate"
+                android:text="@string/recognition_sample_rate" />
+
+            <Spinner
+                android:id="@id/recognition_sample_rate"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+
+            <CheckBox
+                android:id="@+id/continuous_recognition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/continuous_recognition" />
+
+            <TextView
+                style="@style/FieldLabel"
+                android:text="@string/tts_url_label" />
+
+            <EditText
+                android:id="@+id/tts_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/tts_url_hint"
+                android:importantForAutofill="no"
+                android:inputType="textUri"
+                android:singleLine="true" />
+
+            <TextView
+                style="@style/FieldLabel"
+                android:text="@string/tts_protocol_label" />
+
+            <Spinner
+                android:id="@+id/tts_protocol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/tts_speaker_fields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/FieldLabel"
+                    android:text="@string/tts_speaker_label" />
+
+                <EditText
+                    android:id="@+id/tts_speaker_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:importantForAutofill="no"
+                    android:inputType="textVisiblePassword"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/save_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/save" />
+
+            <Button
+                android:id="@+id/speak_external"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/speak_external" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
