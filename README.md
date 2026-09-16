@@ -13,10 +13,13 @@ pull requests and manually through **Run workflow**.
 
 Grant microphone permission in the app. Use **Spracheingabe einrichten** to enable
 the voice keyboard in Android, then select it with the adjacent input-method
-button. The keyboard icon lets you switch back to another keyboard. For reading
-aloud, select Sorbisch in Android's text-to-speech settings and use a compatible
-read-aloud app. Google apps may use their own recognizer instead of the selected
-system service.
+button. The keyboard icon lets you switch back to another keyboard. Google apps
+may use their own recognizer instead of the selected system service.
+
+For reading aloud, select Sorbisch as the preferred engine in Android's
+text-to-speech settings. Then enable **Select to Speak** in Android's accessibility
+settings and use its shortcut to read text on screen. No separate app is required.
+Other apps that use Android's system text-to-speech engine can also use Sorbisch.
 
 Debug APKs are for testing. Fresh CI runners generate different debug signing
 keys, also different from local builds. If Android rejects an update because
